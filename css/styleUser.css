@@ -1,0 +1,233 @@
+body{
+    background-color: #F8F8FF;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.exit{
+    text-align: right;
+}
+.main{
+    margin: auto;
+    width: 75%;
+}
+.personalData{
+    font-size: 18px;
+}
+.photos hr{
+    margin: 0;
+}
+.image{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    float: left;
+}
+img{
+    width: 10%;
+}
+.info h3{
+    margin: 0;
+    padding: 0;
+}
+.info{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+.image button{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 93%;
+    margin-right: 0;
+    transform: translate(-50%, -50%);
+}
+.image:hover{
+    background-color: #FFFFF0;
+}
+h3{
+    margin: 3%;
+}
+.personalData button{
+    margin: 3px;
+}
+.pages form button{
+    margin: 3px;
+}
+.personalData a{
+    margin-top: 8px;
+}
+.message{
+    height: 35px;
+    border: 1px solid green;
+}
+.myMessage form button{
+    margin: 5px;
+}
+.myMessage a{
+    text-decoration: none;
+}
+.myMessage a:hover{
+    text-decoration: underline;
+}
+.myMessage a div{
+    font-size: 20px;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.mes{
+    margin-top: 5px;
+}
+body{
+    background-color: #F8F8FF;
+}
+
+/*вжатие*/
+.exit a, .personalData a{
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #5a84a2;
+    font-size: 18px;
+    border-radius: 40px;
+    box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+    -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+.exit a:hover, .personalData a:hover{
+    box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
+    inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+.exit a:hover span, .personalData a:hover span{
+    display: inline-block;
+    transform: scale(0.95);
+}
+
+/*поделиться*/
+.image form button{
+    transform: translate(-50%, -50%);
+    background: none;
+    color: #808080;
+    border: 1px solid #338033;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: .6s;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+.image form button:focus{
+    outline: none;
+}
+.image form button::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,.5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5;
+    filter: blur(30px);
+    transform: translateX(-130px) skewX(-15deg);
+}
+.image form button::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,.2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(30px);
+    transform: translateX(-100px) skewX(-15deg);
+}
+.image form button:hover{
+    color: #ccc;
+    background: #338033;
+    cursor: pointer;
+}
+.image form button:hover::before{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .6;
+    transition: .7s;
+}
+.image form button:hover::after{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: .7s;
+}
+
+/*странички*/
+.pages form button, .myMessage form button{
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    overflow: hidden;
+    border: 2px solid;
+    border-bottom-width: 4px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: lightskyblue;
+    background: rgba(255,255,255,1);
+    transition: color .3s, background .5s;
+}
+.pages form button:hover, .myMessage form button:hover{
+    animation: stripes .75s infinite linear;
+    background: linear-gradient(45deg, rgba(30,255,188,1) 25%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 50%, rgba(30,255,188,1) 50%,      rgba(30,255,188,1) 75%, rgba(255,255,255,1) 75%, rgba(255,255,255,1));
+    background-size: 10px 10px;
+    color: lightsteelblue;
+}
+@keyframes stripes{
+    0% {background-position: 0 0;}
+    100% {background-position: 50px 0;}
+}
+
+@media screen and (max-width: 1500px){
+    .message{
+        height: 70px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .message{
+        height: 105px;
+    }
+    a{
+        font-size: 75%;
+    }
+    .image form button{
+        font-size: 75%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .message{
+        height: 120px;
+    }
+    a{
+        font-size: 60%;
+    }
+    .image form button{
+        font-size: 60%;
+    }
+}

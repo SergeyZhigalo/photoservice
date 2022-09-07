@@ -1,0 +1,88 @@
+body{
+    background-color: #F8F8FF;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+}
+.main{
+    padding-top: 10%;
+}
+input{
+    font-size: 15px;
+}
+.text {
+    font-size: 18px;
+}
+
+/*кнопка*/
+.login{
+    width: 140px;
+    height: 40px;
+}
+.signup{
+    width: 300px;
+    height: 40px;
+}
+.change{
+    width: 140px;
+    height: 40px;
+}
+.login, .signup, .change{
+    color: #808080;
+    background: none;
+    border: 1px solid #338033;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: .6s;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: consolas;
+}
+.login:focus, .signup:focus, .change:focus{
+    outline: none;
+}
+.login::before, .signup::before, .change::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,.5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5;
+    filter: blur(30px);
+    transform: translateX(-130px) skewX(-15deg);
+}
+.login::after, .signup::after, .change::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,.2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(30px);
+    transform: translateX(-100px) scaleX(-15deg);
+}
+.login:hover, .signup:hover, .change:hover{
+    color: #ccc;
+    background: #338033;
+    cursor: pointer;
+}
+.login:hover::before, .signup:hover::before, .change:hover::before{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .6;
+    transition: .7s;
+}
+.login:hover::after, .signup:hover::after, .change:hover::after{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: .7s;
+}

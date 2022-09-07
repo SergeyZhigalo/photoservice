@@ -1,0 +1,297 @@
+body{
+    background-color: #F8F8FF;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+input{
+    padding: 5px 10px;
+}
+input:focus{
+    outline: none;
+}
+.image {
+    border: 1px solid black;
+    border-radius: 50px;
+    width:32%;
+    height: 70%;
+    float: left;
+    margin: 0 1% 1% 0;
+    text-align: center;
+    padding: 0;
+}
+.image:hover{
+    background-color: #FFFFF0;
+}
+.image img{
+    margin-top: 5%;
+    height: 80%;
+    width: 80%;
+}
+.zero h2{
+    text-align: center;
+    color: red;
+}
+.name{
+    font-size: 100%;
+}
+.pages button{
+    margin: 3px;
+}
+.hashtag{
+    margin-bottom: 5%;
+    font-size: 100%;
+}
+.search{
+    text-align: center;
+}
+.search form input{
+    width: 300px;
+}
+.pages{
+    height: 25px;
+    width: 100%;
+    margin: 0 0 1% 0;
+}
+.previous{
+    float: left;
+}
+.next{
+    float: right;
+}
+.file{
+    width: 400px;
+}
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}
+.status{
+    text-align: right;
+}
+.zagolovok{
+    cursor: pointer;
+}
+.aut, .add form p{
+    text-decoration: none;
+    font-size: 18px;
+}
+.add form p input{
+    height: 20px;
+    font-size: 15px;
+    border-radius: 10px;
+}
+.search form input{
+    height: 22px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+/*вжатие*/
+.aut a{
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #5a84a2;
+    font-size: 18px;
+    border-radius: 40px;
+    box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+    -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+.aut a:hover{
+    box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
+    inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+.aut a:hover span{
+    display: inline-block;
+    transform: scale(0.95);
+}
+
+/*загрузка файла*/
+.example-1 .form-group{
+    padding:1em;
+    margin:1em
+}
+.example-1 input[type=file]{
+    outline:0;
+    opacity:0;
+    pointer-events:none;
+    user-select:none
+}
+.example-1 .label{
+    width:120px;
+    border:2px dashed grey;
+    border-radius:5px;
+    display:block;
+    padding:1.2em;
+    transition:border 300ms ease;
+    cursor:pointer;
+    text-align:center
+}
+.example-1 .label i{
+    display:block;
+    font-size:42px;
+    padding-bottom:16px
+}
+.example-1 .label i,.example-1 .label .title{
+    color:grey;
+    transition:200ms color
+}
+.example-1 .label:hover{
+    border:2px solid #000
+}
+.example-1 .label:hover i,.example-1 .label:hover .title{
+    color:#000
+}
+
+/*заливание*/
+.addPhoto{
+    border: 1px solid #338033;
+    width: 200px;
+    height: 50px;
+}
+.addPhoto:hover{
+    background: #338033;
+    color: #ccc;
+    cursor: pointer;
+}
+.notAut{
+    border: 1px solid red;
+    width: 500px;
+    height: 50px;
+    font-weight: bold;
+}
+.notAut:hover{
+    background: red;
+    color: #ccc;
+}
+.poisk{
+    border: 1px solid blue;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+}
+.poisk:hover{
+    background: blue;
+    color: #ccc;
+}
+/**/
+.addPhoto, .notAut, .poisk{
+    background: none;
+    color: #808080;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: .6s;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: consolas;
+}
+.addPhoto:focus, .notAut:focus, .poisk:focus{
+    outline: none;
+}
+.addPhoto::before, .notAut::before, .poisk::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,.5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5;
+    filter: blur(30px);
+    transform: translateX(-130px) skewX(-15deg);
+}
+.addPhoto::after, .notAut::after, .poisk::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,.2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(30px);
+    transform: translateX(-100px) scaleX(-15deg);
+}
+.addPhoto:hover::before, .notAut:hover::before, .poisk:hover::before{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .6;
+    transition: .7s;
+}
+.addPhoto:hover::after, .notAut:hover::after, .poisk:hover::after{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: .7s;
+}
+
+/*страницы*/
+.buttonPages{
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    overflow: hidden;
+    border: 2px solid;
+    border-bottom-width: 4px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: lightskyblue;
+    background: rgba(255,255,255,1);
+    transition: color .3s, background .5s;
+}
+.buttonPages:hover{
+    animation: stripes .75s infinite linear;
+    background: linear-gradient(45deg, rgba(30,255,188,1) 25%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 50%, rgba(30,255,188,1) 50%,      rgba(30,255,188,1) 75%, rgba(255,255,255,1) 75%, rgba(255,255,255,1));
+    background-size: 10px 10px;
+    color: lightsteelblue;
+}
+@keyframes stripes{
+    0% {background-position: 0 0;}
+    100% {background-position: 50px 0;}
+}
+
+@media screen and (max-width: 1300px){
+    .hashtag{
+        font-size: 80%;
+    }
+    .name{
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .image{
+        width:48%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .image{
+        width:99%;
+    }
+}
+
+@media screen and (max-width: 410px){
+    .add form input{
+        width:120px;
+    }
+    .search form input{
+        width: 250px;
+    }
+}
